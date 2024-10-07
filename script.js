@@ -56,9 +56,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const pwField = document.getElementById("pwd");
     
     // handle clicking of sign in button
-    createAcc.addEventListener('click', function(){
+    // createAcc.addEventListener('click', function(){
         
-    })
+    // })
 
     // Show a random tip when the page loads
     showRandomTip();
