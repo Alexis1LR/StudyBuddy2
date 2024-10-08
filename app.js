@@ -7,7 +7,7 @@ const multer = require('multer'); //middleware for handling form-data (used for 
 const pdf = require('pdf-parse');
 const axios = require('axios');
 import connectDB from "./config/db.js"
-import UserRouter from "./routes/userRouter.js"
+import UserRouter from "./routes/UserRouter.js"
 
 //test to add users to DB
 import User from './models/User.js';

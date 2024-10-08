@@ -11,16 +11,22 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 #title {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: white;
-    font-size: 3.2em;
     font-weight: bold;
     text-shadow: 
         2px 2px 4px rgba(0,0,0,0.5),
@@ -31,7 +37,7 @@ body {
 
 #hamburger-menu {
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 20px;
     z-index: 1000;
     cursor: pointer;
@@ -54,7 +60,7 @@ body {
 
 #menu-items {
     position: absolute;
-    top: 70px;
+    top: 100px;
     right: 20px;
     background-color: white;
     border-radius: 8px;
@@ -62,6 +68,7 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     width: 190px;
     min-width: 100px;
+    z-index: 100;
 }
 
 #menu-items a {
@@ -79,13 +86,38 @@ body {
     height: 18px;
 }
 
-#main-box, .sign-in-box {
+#main-box {
     background-color: #2c2c2c;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 30, 0.4), 0 0 20px rgba(0, 0, 60, 0.3);
     padding: 25px;
     text-align: center;
-    max-width: 280px;
+    max-width: 800px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* For the results page */
+#results-box{
+    /* position:static; */
+    margin-top: 120px;
+    background-color: #2c2c2c;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 30, 0.4), 0 0 20px rgba(0, 0, 60, 0.3);
+    text-align: center;
+    max-width: 800px; 
+    width: 100%;
+    transition: all 0.3s ease;
+    align-self: center;
+}
+
+.sign-in-box{
+    margin-top: 30px;
+    background-color: #2c2c2c;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 30, 0.4), 0 0 20px rgba(0, 0, 60, 0.3);
+    text-align: center;
+    max-width: 800px; 
     width: 100%;
     transition: all 0.3s ease;
 }

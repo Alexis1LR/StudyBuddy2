@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Buddy</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="results_styles.css">
+    <script async src="results.js"></script>
 </head>
 <body>
-    <h1 id="title">Study Buddy</h1>
+    <header>
+        <h1 id="title">Study Buddy</h1>
+    </header>
     <div id="hamburger-menu">
         <div class="hamburger-line"></div>
         <div class="hamburger-line"></div>
@@ -19,9 +22,32 @@
         <a href="#profile"><span class="icon brain"></span>Study Stats</a>
         <a href="#profile"><span class="icon award"></span>Achievements</a>
     </div>
-    <div id="main-box">
+    <div id="results-box">
         <h2>Here is your quiz!</h2>
-        <p class ="output">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?</p>
+        <div class = "output-text">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis, cupiditate odio suscipit nulla magnam incidunt, quod commodi sunt maiores sed minima. Eligendi, quis iusto. Tempora in numquam voluptatem corrupti?
+            </p>
+        </div>
     </div>
 
     <div class="sign-in-box">
@@ -35,8 +61,7 @@
 
             <label for="password" class = "label">Password</label><br>
             <input type ="password" id ="pwd" name="pwd"><br>
-
-            <input type="submit" value="Submit">
+            
             <button class="make-account">Create Account</button>
         </form>
        
@@ -49,6 +74,6 @@
         </div>
         <button id="close-tip">×</button>
     </div>
-    <script src="script.js"></script>
+    
 </body>
 </html>
