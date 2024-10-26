@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     fileInput.addEventListener('change', function() {
-        const files = this.files;
+        const files = this.files; //for easier referencing of files
         if (files.length > 0) {
             fileCount.textContent = `${files.length} file(s) selected`;
             fileCount.classList.remove('hidden');
@@ -30,6 +30,20 @@ document.addEventListener('DOMContentLoaded', function() {
             fileCount.classList.add('hidden');
             generateQuizBtn.disabled = true;
         }
+        const file = files[0]; //first file in list of files
+
+        // pdf(file).then(function (data) {
+        //     console.log(data.numpages)
+        // })
+        // const reader = new FileReader();
+
+        // reader.onload = (event) => {
+        //     const fileContents = event.target.result;
+        //     console.log('File contents:', fileContents);
+        // };
+
+        // reader.readAsText(file);
+
     });
 
     generateQuizBtn.addEventListener('click', function() {
