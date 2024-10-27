@@ -4,6 +4,7 @@ import express from "express";
 import mongoose from "mongoose";
 import multer from "multer"; //middleware for handling form-data (used for uploading files)
 import axios from "axios";
+import cors from "cors"; //used to have different ports communicate with eachother
 import connectDB from "./config/db.js"
 import UserRouter from "./routes/UserRouter.js"
 
@@ -19,8 +20,13 @@ import User from './models/User.js';
 //will use app to define routes, use middleware, start the server and more
 const app = express();
 //if environment variable PORT is available, use it. else, use port 3000 as fallback
-const port =  3000;
+const port =  5000;
 
+app.use(cors()); //express will now use CORS
+
+app.get('/api/test', (req, res) => {
+    res.json({ message: 'CORS is working!' });
+});
 //middleware
 app.use(express.json());
 app.use("/api", UserRouter);
