@@ -33,9 +33,35 @@ export function App() {
 
 
 export function FileInputBox(){
+  const fileInputRef = useRef(null);
+ 
+  async function handleClick(){
+    const file = fileInputRef.current.files[0];
+    
+    if (!file) {
+      alert('Please select a PDF file first');
+      return;
+    }
 
-  function handleClick(){
-    console.log("generating quiz")
+    const formData = new FormData();
+    formData.append('pdf', file);
+
+    try {
+      const response = await fetch('http://localhost:5000/api/upload-pdf', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        console.log('PDF content:', data.data.text);
+        // Here you would send this text to ChatGPT API to generate the quiz
+      } else {
+        console.error('Error:', data.error);
+      }
+    } catch (error) {
+      console.error('Error uploading file:', error);
+    }
   }
 
   const fileCountRef = useRef(null)
@@ -43,10 +69,12 @@ export function FileInputBox(){
   function handleChange(event){
     const files = event.target.files; // Access files through event.target
         if (files.length > 0) {
+            console.log("Enabling button"); // Debug log
             fileCountRef.current.textContent = `${files.length} file(s) selected`;
             fileCountRef.current.classList.remove('hidden');
             generateQuizBtnRef.current.disabled = false;
         } else {
+            console.log("Disabling button"); // Debug log
             fileCountRef.current.classList.add('hidden');
             generateQuizBtnRef.current.disabled = true;
         }
@@ -57,10 +85,10 @@ export function FileInputBox(){
     <h2>Upload Notes</h2>
     <div className="file-upload">
         <label htmlFor="file-input" className="file-label">Select Files</label>
-        <input type="file" id="file-input" onChange={handleChange}></input>
+        <input type="file" id="file-input" ref ={fileInputRef} onChange={handleChange}></input>
     </div>
     <div id="file-count" className="hidden" ref={fileCountRef}></div>
-    <button id="generate-quiz" disabled ref={generateQuizBtnRef} onClick={handleClick}>Auto Generate Quiz</button>
+    <button id="generate-quiz"  ref={generateQuizBtnRef} onClick={handleClick}>Auto Generate Quiz</button>
   </div>
   );
 }
